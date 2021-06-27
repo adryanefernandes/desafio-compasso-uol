@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
-import CardProfile from '../components/CardProfile'
-import { useRequestData } from '../hooks/useRequestData'
+import CardProfile from '../../components/cardProfile/CardProfile'
+import { useRequestData } from '../../hooks/useRequestData'
+import { Main, Results } from './SearchResultPageStyled'
 
 function SearchResultPage() {
   const params = useParams()
@@ -13,10 +14,10 @@ function SearchResultPage() {
     />
   })
 
-  return <main>
-    <p>Resultados: {searchResult?.total_count}</p>
+  return <Main>
+    <Results>Resultados:<span> {searchResult?.total_count}</span></Results>
     {usersList}
-  </main>
+  </Main>
 }
 
 export default SearchResultPage

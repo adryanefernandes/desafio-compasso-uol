@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import DetailsUserPage from "../pages/DetailsUserPage";
+import DetailsUserPage from "../pages/DetailsUser/DetailsUserPage";
 import HomePage from "../pages/Home/HomePage";
-import SearchResultPage from "../pages/SearchResultPage";
+import SearchResultPage from "../pages/SearchResult/SearchResultPage";
 
 function Router() {
   return <BrowserRouter>

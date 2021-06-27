@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
-import { useRequestData } from '../hooks/useRequestData'
-import UserRepositories from '../components/UserRepositories'
-import UserStarred from '../components/UserStarred'
+import { useRequestData } from '../../hooks/useRequestData'
+import UserRepositories from '../../components/UserRepositories'
+import UserStarred from '../../components/UserStarred'
 
 function DetailsUserPage() {
   const params = useParams()
