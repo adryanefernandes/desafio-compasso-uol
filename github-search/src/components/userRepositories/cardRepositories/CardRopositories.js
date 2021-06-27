@@ -1,4 +1,4 @@
-import { useRequestData } from '../hooks/useRequestData'
+import { useRequestData } from '../../../hooks/useRequestData'
 
 function CardRepository(props) {
   const repository = useRequestData({}, `/repos/${props.userName}/${props.repoName}`)

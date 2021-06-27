@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useRequestData } from '../../hooks/useRequestData'
-import UserRepositories from '../../components/UserRepositories'
+import UserRepositories from '../../components/userRepositories/UserRepositories'
 import UserStarred from '../../components/userStarred/UserStarred'
 import { Main, CardUser, CardBody, Bio, ButtonGroup, Infos } from './DetailsUserPageStyled'
 import { Button } from 'reactstrap';
@@ -22,7 +22,9 @@ function DetailsUserPage() {
         userName={params.user}
       />
     } else if (page === 'repos') {
-      return <UserRepositories />
+      return <UserRepositories 
+        userName={params.user}
+      />
     }
 
   }

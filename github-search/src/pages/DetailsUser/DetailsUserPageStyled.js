@@ -60,9 +60,7 @@ export const ButtonGroup = styled.section `
       background: rgb(9, 8, 3, 1);
       color: white;
     }
-  }
-
-  
+  } 
 `
 export const Infos = styled.section`
   overflow-y: auto;
