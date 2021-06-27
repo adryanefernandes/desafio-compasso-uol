@@ -1,30 +1,28 @@
 import { useParams } from 'react-router-dom'
 import { useRequestData } from '../hooks/useRequestData'
+import RepositoriesUser from '../components/RepositoriesUser'
 
 function DetailsUserPage() {
   const params = useParams()
 
   const user = useRequestData({}, `/users/${params.user}`)
-  const repos = useRequestData({}, `/users/${params.user}/repos`)
-  const starred = useRequestData({}, `/users/${params.user}/starred`)
-  console.log(repos)
-  console.log(starred)
+  // Colocar eventos recentes: /users/adryanefernandes/events
 
   return <main>
     <div>
       <img src={user?.avatar_url} alt={"user avatar"} />
       <h2>{user?.name}</h2>
-      <p>{user?.bio}</p>
+      {/* <p>{user?.bio}</p>
+      <p>{user?.location}</p>
       <p>{user?.followers}</p>
       <p>{user?.following}</p>
       <p>{user?.location}</p>
       <p>{user?.login}</p>
       <p>{user?.public_gists}</p>
-      <p>{user?.public_repos}</p>
+      <p>{user?.public_repos}</p> */}
+      <RepositoriesUser />
     </div>
-    <div>
 
-    </div>
   </main>
 }
 
