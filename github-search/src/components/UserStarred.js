@@ -3,7 +3,6 @@ import CardStarred from './CardStarred'
 
 function UserStarred(props){
   const starred = useRequestData({}, `/users/${props.userName}/starred`)
-  console.log(starred)
 
   const starredList = starred[0] && starred.map((repo) => {
     return <CardStarred 
