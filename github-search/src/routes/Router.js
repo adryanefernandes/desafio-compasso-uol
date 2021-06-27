@@ -1,16 +1,16 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import UsersListPage from "./pages/UsersListPage";
+import HomePage from "../pages/HomePage";
+import SearchResultPage from "../pages/SearchResultPage";
 
-function Routes() {
+function Router() {
   return <BrowserRouter>
     <Switch>
       <Route exact path = "/">
         <HomePage />
       </Route>
 
-      <Route exact path = "/search">
-        <UsersListPage />
+      <Route exact path = "/search/:user">
+        <SearchResultPage />
       </Route>
 
       <Route>
@@ -21,4 +21,4 @@ function Routes() {
   </BrowserRouter>
 }
 
-export default Routes
+export default Router
