@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import Card from '../components/Card'
+import CardProfile from '../components/CardProfile'
 import { useRequestData } from '../hooks/useRequestData'
 
 function SearchResultPage() {
@@ -8,7 +8,7 @@ function SearchResultPage() {
   const searchResult = useRequestData({}, `/search/users?q=${params.user}`)
 
   const usersList = searchResult.items && searchResult.items.map((user) => {
-    return <Card
+    return <CardProfile
       user={user.login}
     />
   })

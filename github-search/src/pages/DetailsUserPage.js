@@ -20,7 +20,9 @@ function DetailsUserPage() {
       <p>{user?.login}</p>
       <p>{user?.public_gists}</p>
       <p>{user?.public_repos}</p> */}
-      <RepositoriesUser />
+      <RepositoriesUser 
+        userName={params.user}
+      />
     </div>
 
   </main>
