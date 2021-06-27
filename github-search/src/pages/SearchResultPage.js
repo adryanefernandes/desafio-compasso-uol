@@ -1,17 +1,21 @@
 import { useParams } from 'react-router-dom'
+import CardProfile from '../components/CardProfile'
 import { useRequestData } from '../hooks/useRequestData'
 
-function SearchResultPage(){
+function SearchResultPage() {
   const params = useParams()
 
-  const user = useRequestData({}, `/users/${params.user}`)
-  console.log(user)
+  const searchResult = useRequestData({}, `/search/users?q=${params.user}`)
 
-  // const user = useRequestData({}, "/search/users?q=adry")
-  // console.log(user)
+  const usersList = searchResult.items && searchResult.items.map((user) => {
+    return <CardProfile
+      user={user.login}
+    />
+  })
 
   return <main>
-
+    <p>Resultados: {searchResult?.total_count}</p>
+    {usersList}
   </main>
 }
 
