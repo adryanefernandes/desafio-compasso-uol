@@ -2,7 +2,7 @@ import { useRequestData } from '../hooks/useRequestData'
 import { goToDetailsUserPage } from '../routes/coordinator'
 import { useHistory } from 'react-router-dom'
 
-function Card(props) {
+function CardProfile(props) {
   const history = useHistory()
 
   const user = useRequestData({}, `/users/${props.user}`)
@@ -16,4 +16,4 @@ function Card(props) {
   </div>
 }
 
-export default Card
+export default CardProfile

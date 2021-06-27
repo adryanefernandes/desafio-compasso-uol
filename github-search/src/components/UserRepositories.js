@@ -2,7 +2,7 @@ import { useRequestData } from '../hooks/useRequestData'
 import CardRepository from './CardRopository'
 
 
-function RepositoriesUser(props) {
+function UserRepositories(props) {
   const repos = useRequestData({}, `/users/${props.userName}/repos`)
 
   const reposList = repos[0] && repos.map((repo) => {
@@ -18,4 +18,4 @@ function RepositoriesUser(props) {
   </div>
 }
 
-export default RepositoriesUser
+export default UserRepositories
