@@ -1,17 +1,23 @@
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import { useRequestData } from '../hooks/useRequestData'
+import { goToDetailsUserPage } from '../routes/coordinator'
 
-function SearchResultPage(){
+function SearchResultPage() {
   const params = useParams()
+  const history = useHistory()
 
-  const user = useRequestData({}, `/users/${params.user}`)
-  console.log(user)
+  const searchResult = useRequestData({}, `/search/users?q=${params.user}`)
 
-  // const user = useRequestData({}, "/search/users?q=adry")
-  // console.log(user)
+  const usersList = searchResult.items && searchResult.items.map((user) => {
+    return <div onClick={() => goToDetailsUserPage(history, user.login)}>
+      <img src={user.avatar_url} alt={"user avatar"} />
+      <p>name: {user.login}</p>
+    </div>
+  })
 
+  
   return <main>
-
+    {usersList}
   </main>
 }
 
