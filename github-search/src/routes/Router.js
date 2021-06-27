@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import DetailsUserPage from "../pages/DetailsUserPage";
 import HomePage from "../pages/HomePage";
 import SearchResultPage from "../pages/SearchResultPage";
 
@@ -9,12 +10,16 @@ function Router() {
         <HomePage />
       </Route>
 
-      <Route exact path = "/search/:user">
+      <Route exact path = "/user/search/:user">
         <SearchResultPage />
       </Route>
 
+      <Route exact path = "/user/:user">
+        <DetailsUserPage />
+      </Route>
+
       <Route>
-        {/* Página de erro */}
+        {/* página de erro */}
       </Route>
 
     </Switch>
