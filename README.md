@@ -19,4 +19,3 @@ https://skinny-start.surge.sh
 
 ### :wrench: Tecnologia
 - React
-
