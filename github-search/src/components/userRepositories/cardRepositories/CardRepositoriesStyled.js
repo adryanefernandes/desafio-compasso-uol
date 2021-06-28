@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Card = styled.div`
   background: rgb(9, 8, 3, .5);
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #1f1f1f;
 `
@@ -23,7 +23,7 @@ export const CardBody = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 50%;
+  height: 2rem;
 
   img{
     width: 1rem;
