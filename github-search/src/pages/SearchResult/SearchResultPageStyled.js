@@ -55,8 +55,6 @@ export const PaginationItem = styled.button `
   padding: .5rem;
 
   &:hover{
-    background: none;
-    color: white;
     transform: scale(1.1);
   }
 `

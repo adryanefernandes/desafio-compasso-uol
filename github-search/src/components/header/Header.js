@@ -3,7 +3,7 @@ import { useInput } from '../../hooks/useInput'
 import { Container } from './HeaderStyled'
 import { useHistory, useParams } from 'react-router-dom'
 import { goBack, goToHome } from '../../routes/coordinator'
-import { Form } from './HeaderStyled'
+import { Form, BackButton } from './HeaderStyled'
 import magnifyingGlass from '../../assets/magnifyingGlass.png'
 
 function Header(props) {
@@ -22,7 +22,7 @@ function Header(props) {
   
 
   return <Container>
-    <button onClick={changeButton}><img src={arrow} alt={"back arrowicon"} /><p>Voltar</p></button>
+    <BackButton onClick={changeButton}><img src={arrow} alt={"back arrowicon"} /><span>Voltar</span></BackButton>
 
     <Form>
       <input

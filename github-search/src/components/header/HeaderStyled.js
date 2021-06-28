@@ -7,32 +7,32 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  button{
-    background: none;
-    padding: .2rem;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+`
 
-    img{
-      width: 2rem;
-    }
+export const BackButton = styled.button `
+  padding: .2rem;
+  background: none;
+  border: none;
 
-    p{
-      color: white;
-      padding-left: .3rem;
-      font-size: 1.2rem;
-    }
+  display: flex;
+  align-items: center;
 
-    &hover{
-      background: #121212;
-    }
+  img{
+    width: 2rem;
+  }
+  span{
+    color: white;
+    padding-left: .3rem;
+    font-size: 1.2rem;
+  }
+  &hover{
+    background: #121212;
+  }
+  @media screen and (min-device-width: 320px) and (max-device-width: 420px){
+    flex-direction: column;
+  }
 
-    @media screen and (min-device-width: 320px) and (max-device-width: 420px){
-      flex-direction: column;
-    }
-  }  
 `
 
 export const Form = styled.div`
