@@ -1,5 +1,5 @@
 # Pesquisa de perfil no github
-Site para a busca de perfis do github, feito para o teste da Compasso Uol
+Site para a busca de perfis do github, feito para o desafio da Compasso Uol
 
 ### Features
 
