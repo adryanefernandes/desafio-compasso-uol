@@ -8,16 +8,13 @@ import { useState } from 'react'
 
 function DetailsUserPage() {
   const params = useParams()
-  const [page, setPage] = useState('recent events')
+  const [page, setPage] = useState('starred')
 
   const user = useRequestData({}, `/users/${params.user}`)
   const starred = useRequestData({}, `/users/${params.user}/starred`)
 
-  // Colocar eventos recentes: /users/adryanefernandes/events
-  const seletedButton = (selectedPage) => {
-    if (page === 'recent events') {
-      return <div> Eventos recentes </div>
-    } else if (page === 'starred') {
+  const seletedButton = () => {
+    if (page === 'starred') {
       return <UserStarred
         userName={params.user}
       />
@@ -26,7 +23,6 @@ function DetailsUserPage() {
         userName={params.user}
       />
     }
-
   }
 
   return <Main>
@@ -36,18 +32,17 @@ function DetailsUserPage() {
         <h2>{user?.name}</h2>
         <Bio>{user?.bio}</Bio>
         <p>Localidade: {user?.location}</p>
-        <p>User: {user?.login}</p>
+        <p>Usuário: {user?.login}</p>
         <p>Seguidores: {user?.followers}</p>
         <p>Seguindo: {user?.following}</p>
-        <p>Estrelou: {starred?.length}</p>
+        <p>Estrelas dadas: {starred?.length}</p>
         <p>Repositórios: {user?.public_repos}</p>
       </CardBody>
 
     </CardUser>
     <ButtonGroup>
-      <Button onClick={() => setPage("recent events")}>Eventos Recentes</Button>
-      <Button onClick={() => setPage("starred")}>Estrelas dadas</Button>
-      <Button onClick={() => setPage("repos")}>Repositórios</Button>
+      <Button  onClick={() => setPage("starred")}>Estrelas dadas</Button>
+      <Button  onClick={() => setPage("repos")}>Repositórios</Button>
     </ButtonGroup>
 
     <Infos>

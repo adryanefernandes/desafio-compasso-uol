@@ -14,7 +14,6 @@ function UserStarred(props) {
     />
   })
 
-
   return <ContainerStarred>
     {starredList}
   </ContainerStarred>

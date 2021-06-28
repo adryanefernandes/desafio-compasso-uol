@@ -7,6 +7,12 @@ export const Main = styled.main `
   padding: 1rem;
 
   background-color: #121212;
+
+  @media screen and (min-device-width: 320px) and (max-device-width: 800px){
+    flex-direction: column;
+    grid-template-rows: 1fr 3rem 2fr;
+    height: 100%;
+  }
 `
 
 export const CardUser = styled.section `
@@ -28,6 +34,12 @@ export const CardUser = styled.section `
   p{
     margin-top: .2rem;
   }
+
+  @media screen and (min-device-width: 320px) and (max-device-width: 800px){
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
 `
 
 export const CardBody = styled.section `
@@ -43,7 +55,7 @@ export const ButtonGroup = styled.section `
   width: 100%;
   
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: .5rem;
 
   button{
