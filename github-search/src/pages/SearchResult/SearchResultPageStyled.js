@@ -37,3 +37,38 @@ export const Results = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 `
+
+export const Pagination = styled.nav `
+  background: #121212;
+  width: 100%;
+  padding: .5rem;
+
+  display: flex;
+  justify-content: center;
+
+
+`
+
+export const PaginationItem = styled.button `
+  border: none;
+  background: #121212;
+  padding: .5rem;
+
+  &:hover{
+    background: none;
+    color: white;
+    transform: scale(1.1);
+  }
+`
+
+export const PaginationLink = styled.a `
+  text-decoration: none;
+  color: white;
+
+  &:visited{
+    color: white;
+  }
+  &:hover{
+    color: white;
+  }
+`

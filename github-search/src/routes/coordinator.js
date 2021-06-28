@@ -3,7 +3,7 @@ export const goToHome = (history) => {
 }
 
 export const goToSearchPage = (history, user) => {
-  history.push(`/user/search/${user}`)
+  history.push(`/user/search/${user}/1`)
 }
 
 export const goToDetailsUserPage = (history, id) => {

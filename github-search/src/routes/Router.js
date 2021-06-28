@@ -11,7 +11,7 @@ function Router() {
         <HomePage />
       </Route>
 
-      <Route exact path = "/user/search/:user">
+      <Route exact path = "/user/search/:user/:page">
         <SearchResultPage />
       </Route>
 
