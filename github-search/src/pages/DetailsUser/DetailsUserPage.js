@@ -3,6 +3,7 @@ import { useRequestData } from '../../hooks/useRequestData'
 import UserRepositories from '../../components/userRepositories/UserRepositories'
 import UserStarred from '../../components/userStarred/UserStarred'
 import Header from '../../components/header/Header'
+import Loading from '../../components/loading/Loading'
 import { Main, CardUser, CardBody, Bio, ButtonGroup, Infos } from './DetailsUserPageStyled'
 import { Button } from 'reactstrap';
 import { useState } from 'react'
@@ -20,39 +21,41 @@ function DetailsUserPage() {
         userName={params.user}
       />
     } else if (page === 'repos') {
-      return <UserRepositories 
+      return <UserRepositories
         userName={params.user}
       />
     }
   }
 
-  return<> 
-  <Header page={'details'} />
-  <Main>
-    <CardUser>
-      <img src={user?.avatar_url} alt={"user avatar"} />
-      <CardBody>
-        <h2>{user?.name}</h2>
-        <Bio>{user?.bio}</Bio>
-        <p>Localidade: {user?.location}</p>
-        <p>Usuário: {user?.login}</p>
-        <p>Seguidores: {user?.followers}</p>
-        <p>Seguindo: {user?.following}</p>
-        <p>Estrelas dadas: {starred?.length}</p>
-        <p>Repositórios: {user?.public_repos}</p>
-      </CardBody>
+  return <>
+    <Header page={'details'} />
+    {!user ? <Loading /> : 
+    <Main>
+      
+      <CardUser>
+        <img src={user?.avatar_url} alt={"user avatar"} />
+        <CardBody>
+          <h2>{user?.name}</h2>
+          <Bio>{user?.bio}</Bio>
+          <p>Localidade: {user?.location}</p>
+          <p>Usuário: {user?.login}</p>
+          <p>Seguidores: {user?.followers}</p>
+          <p>Seguindo: {user?.following}</p>
+          <p>Estrelas dadas: {starred?.length}</p>
+          <p>Repositórios: {user?.public_repos}</p>
+        </CardBody>
+      </CardUser>
 
-    </CardUser>
-    <ButtonGroup>
-      <Button  onClick={() => setPage("starred")}>Estrelas dadas</Button>
-      <Button  onClick={() => setPage("repos")}>Repositórios</Button>
-    </ButtonGroup>
+      <ButtonGroup>
+        <Button onClick={() => setPage("starred")}>Estrelas dadas</Button>
+        <Button onClick={() => setPage("repos")}>Repositórios</Button>
+      </ButtonGroup>
 
-    <Infos>
-      {seletedButton()}
-    </Infos>
-  </Main>
+      <Infos>
+        {seletedButton()}
+      </Infos>
+      </Main>}
   </>
 }
 
-export default DetailsUserPage
+    export default DetailsUserPage

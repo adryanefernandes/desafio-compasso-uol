@@ -1,11 +1,14 @@
 import { useHistory, useParams } from 'react-router-dom'
 import CardProfile from '../../components/cardProfile/CardProfile'
 import Header from '../../components/header/Header'
+import Loading from '../../components/loading/Loading'
 import { useRequestData } from '../../hooks/useRequestData'
 import { goToDetailsUserPage } from '../../routes/coordinator'
 import { Main, Results, Pagination } from './SearchResultPageStyled'
 import { PaginationItem, PaginationLink } from './SearchResultPageStyled';
 import { useState } from 'react'
+import arrowRight from '../../assets/arrow-right.png'
+import arrowLeft from '../../assets/arrow-left.png'
 
 function SearchResultPage() {
   const history = useHistory()
@@ -31,16 +34,18 @@ function SearchResultPage() {
   return <>
     <Header page={'search'} />
     <Main>
+      
       <p>Resultados:<span> {searchResult?.total_count}</span></p>
+      {!usersList ? <Loading />  : 
       <Results>
         {usersList}
-      </Results>
+      </Results>}
     </Main>
 
     <Pagination>
       <PaginationItem>
         <PaginationLink previous href={`http://localhost:3000/user/search/${params.user}/${page - 1}`} >
-          Previous
+          <img src={arrowLeft} alt={"arrow left icon"}/>
         </PaginationLink>
       </PaginationItem>
       <PaginationItem>
@@ -60,7 +65,7 @@ function SearchResultPage() {
       </PaginationItem>
       <PaginationItem>
         <PaginationLink next href={`http://localhost:3000/user/search/${params.user}/${page + 1}`} >
-          Next
+        <img src={arrowRight} alt={"arrow right icon"}/>
         </PaginationLink>
       </PaginationItem>
     </Pagination>
