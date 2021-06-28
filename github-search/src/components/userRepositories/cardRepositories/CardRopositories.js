@@ -1,5 +1,6 @@
 import { useRequestData } from '../../../hooks/useRequestData'
 import { Card, Name, Update, CardBody } from './CardRepositoriesStyled'
+import star from '../../../assets/star.png'
 
 function CardRepository(props) {
   const repository = useRequestData({}, `/repos/${props.userName}/${props.repoName}`)
@@ -11,8 +12,8 @@ function CardRepository(props) {
     <Update>autalizado em {updated_date && updated_date[0]}</Update>
 
     <CardBody>
-      <p>Estrelas: {repository?.stargazers_count}</p>
       <p>{repository?.language}</p>
+      <p><img src={star} alt={"icon star"} /> {repository?.stargazers_count}</p>
     </CardBody>
 
   </Card>

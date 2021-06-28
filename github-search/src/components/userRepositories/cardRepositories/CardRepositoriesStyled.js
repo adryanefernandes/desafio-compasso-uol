@@ -20,6 +20,12 @@ export const Update = styled.p`
 
 
 export const CardBody = styled.div`
-  color: #b8b8b8;
-  font-size: .8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50%;
+
+  img{
+    width: 1rem;
+  }
 `
