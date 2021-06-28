@@ -11,7 +11,6 @@ function SearchResultPage() {
   const params = useParams()
 
   const searchResult = useRequestData({}, `/search/users?q=${params.user}`)
-  console.log(searchResult)
 
   if (searchResult && searchResult.total_count === 1) {
     goToDetailsUserPage(history, params.user)

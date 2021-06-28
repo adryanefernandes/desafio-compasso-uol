@@ -9,3 +9,7 @@ export const goToSearchPage = (history, user) => {
 export const goToDetailsUserPage = (history, id) => {
   history.push(`/user/${id}`)
 }
+
+export const goBack = (history) => {
+  history.goBack()
+}

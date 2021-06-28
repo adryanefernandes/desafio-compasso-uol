@@ -27,8 +27,8 @@ function DetailsUserPage() {
   }
 
   return<> 
-  <Header />
-  <Main page={'details'}>
+  <Header page={'details'} />
+  <Main>
     <CardUser>
       <img src={user?.avatar_url} alt={"user avatar"} />
       <CardBody>

@@ -1,6 +1,5 @@
 import { useInput } from '../../hooks/useInput'
 import { useParams } from 'react-router-dom'
-
 import { useHistory } from 'react-router-dom'
 import { goToSearchPage } from '../../routes/coordinator'
 import { Input, Logo, Title, Form, MagnifyingGlass, ButtonSearch, Main } from './HomePageStyled'
