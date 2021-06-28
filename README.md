@@ -11,10 +11,10 @@ Site para a busca de perfis do github, feito para o teste da Compasso Uol
 - [x] Lista de estrelas dadas
 - [x] Responsivo para tablet e celular
 
-### Print das telas
-
-
 ### Link do site
+
+
+### Print das telas
 - início
 ![image](https://user-images.githubusercontent.com/76170319/123593543-035eb680-d7c5-11eb-9c49-54af59281230.png)
 
