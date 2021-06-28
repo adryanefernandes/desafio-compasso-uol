@@ -1,3 +1,7 @@
+export const goToHome = (history) => {
+  history.push(`/`)
+}
+
 export const goToSearchPage = (history, user) => {
   history.push(`/user/search/${user}`)
 }

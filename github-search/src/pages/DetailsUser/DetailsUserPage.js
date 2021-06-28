@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useRequestData } from '../../hooks/useRequestData'
 import UserRepositories from '../../components/userRepositories/UserRepositories'
 import UserStarred from '../../components/userStarred/UserStarred'
+import Header from '../../components/header/Header'
 import { Main, CardUser, CardBody, Bio, ButtonGroup, Infos } from './DetailsUserPageStyled'
 import { Button } from 'reactstrap';
 import { useState } from 'react'
@@ -25,7 +26,9 @@ function DetailsUserPage() {
     }
   }
 
-  return <Main>
+  return<> 
+  <Header />
+  <Main page={'details'}>
     <CardUser>
       <img src={user?.avatar_url} alt={"user avatar"} />
       <CardBody>
@@ -49,6 +52,7 @@ function DetailsUserPage() {
       {seletedButton()}
     </Infos>
   </Main>
+  </>
 }
 
 export default DetailsUserPage
