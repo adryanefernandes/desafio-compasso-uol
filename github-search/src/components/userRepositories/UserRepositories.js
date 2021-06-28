@@ -1,21 +1,22 @@
-import { useRequestData } from '../hooks/useRequestData'
-import CardRepository from './CardRopository'
+import { useRequestData } from '../../hooks/useRequestData'
+import CardRepository from './cardRepositories/CardRopositories'
+import { ContainerRepositories } from './UserRepositoriesStyled'
 
 
 function UserRepositories(props) {
   const repos = useRequestData({}, `/users/${props.userName}/repos`)
 
   const reposList = repos[0] && repos.map((repo) => {
-    return <CardRepository 
+    return <CardRepository
       key={repo.id}
       repoName={repo.name}
       userName={props.userName}
     />
   })
 
-  return <div>
+  return <ContainerRepositories>
     {reposList}
-  </div>
+  </ContainerRepositories>
 }
 
 export default UserRepositories

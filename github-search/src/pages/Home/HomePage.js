@@ -1,4 +1,6 @@
 import { useInput } from '../../hooks/useInput'
+import { useParams } from 'react-router-dom'
+
 import { useHistory } from 'react-router-dom'
 import { goToSearchPage } from '../../routes/coordinator'
 import { Input, Logo, Title, Form, MagnifyingGlass, ButtonSearch, Main } from './HomePageStyled'
@@ -7,7 +9,9 @@ import magnifyingGlass from '../../assets/lupa.png'
 
 function HomePage() {
   const history = useHistory()
-  const [value, handleInput] = useInput("")
+  const params = useParams()
+
+  const [value, handleInput] = useInput(params.user)
 
   return <Main>
       <Logo src={githubLogo} alt={"github logo"} />
