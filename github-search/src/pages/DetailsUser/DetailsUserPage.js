@@ -40,7 +40,7 @@ function DetailsUserPage() {
         <p>Seguidores: {user?.followers}</p>
         <p>Seguindo: {user?.following}</p>
         <p>Estrelou: {starred?.length}</p>
-        <p>Repositórioss: {user?.public_repos}</p>
+        <p>Repositórios: {user?.public_repos}</p>
       </CardBody>
 
     </CardUser>

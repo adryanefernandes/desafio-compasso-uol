@@ -6,11 +6,6 @@ export const Card = styled.div`
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #1f1f1f;
-
-  &:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-  }
 `
 
 export const Name = styled.p`
@@ -18,7 +13,13 @@ export const Name = styled.p`
   font-weight: 600;
 `
 
-export const Description = styled.p`
-  margin-top: .8rem;
-  color: #949494;
+export const Update = styled.p`
+  color: #b8b8b8;
+  font-size: .8rem;
+`
+
+
+export const CardBody = styled.div`
+  color: #b8b8b8;
+  font-size: .8rem;
 `

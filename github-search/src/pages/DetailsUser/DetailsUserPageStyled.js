@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Main = styled.main `
   display: grid;
-  grid-template-rows: 1fr 3rem 2fr;
+  grid-template-rows: 15rem 4rem 2fr;
   height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
 
   background-color: #121212;
 `

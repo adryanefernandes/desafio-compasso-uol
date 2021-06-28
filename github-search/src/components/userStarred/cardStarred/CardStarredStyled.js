@@ -6,11 +6,6 @@ export const Card = styled.div`
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #1f1f1f;
-
-  &:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-  }
 `
 
 export const Name = styled.p`

@@ -11,8 +11,6 @@ function CardProfile(props) {
   const history = useHistory()
 
   const user = useRequestData({}, `/users/${props.user}`)
-  console.log(user)
-
 
   return <Card onClick={() => goToDetailsUserPage(history, user.login)}>
     <CardImg top width="100%" src={user?.avatar_url} alt={"user avatar"} />
