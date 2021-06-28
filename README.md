@@ -12,7 +12,7 @@ Site para a busca de perfis do github, feito para o teste da Compasso Uol
 - [x] Responsivo para tablet e celular
 
 ### Link do site
-
+https://skinny-start.surge.sh
 
 ### Print das telas
 - início
