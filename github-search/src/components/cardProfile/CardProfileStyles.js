@@ -20,4 +20,8 @@ export const Card = styled.div`
     font-size: 1rem;
     padding: .2rem 0 .5rem 0;
   }
+
+  p{
+    padding: 0;
+  }
 `

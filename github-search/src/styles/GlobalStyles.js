@@ -12,10 +12,6 @@ export default createGlobalStyle `
 
   button{
     cursor: pointer;
-
-    &:hover{
-      background: #9E9E9E;
-    }
   }
 
   input{

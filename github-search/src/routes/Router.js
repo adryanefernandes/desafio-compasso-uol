@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import DetailsUserPage from "../pages/DetailsUser/DetailsUserPage";
 import HomePage from "../pages/Home/HomePage";
 import SearchResultPage from "../pages/SearchResult/SearchResultPage";
+import ErrorPage from "../pages/Error/ErrorPage";
 
 function Router() {
   return <BrowserRouter>
@@ -10,7 +11,7 @@ function Router() {
         <HomePage />
       </Route>
 
-      <Route exact path = "/user/search/:user">
+      <Route exact path = "/user/search/:user/:page">
         <SearchResultPage />
       </Route>
 
@@ -19,7 +20,7 @@ function Router() {
       </Route>
 
       <Route>
-        {/* página de erro */}
+        <ErrorPage />
       </Route>
 
     </Switch>

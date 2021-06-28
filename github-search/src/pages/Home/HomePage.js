@@ -1,11 +1,10 @@
 import { useInput } from '../../hooks/useInput'
 import { useParams } from 'react-router-dom'
-
 import { useHistory } from 'react-router-dom'
 import { goToSearchPage } from '../../routes/coordinator'
 import { Input, Logo, Title, Form, MagnifyingGlass, ButtonSearch, Main } from './HomePageStyled'
 import githubLogo from '../../assets/github.png'
-import magnifyingGlass from '../../assets/lupa.png'
+import magnifyingGlass from '../../assets/magnifyingGlass.png'
 
 function HomePage() {
   const history = useHistory()
