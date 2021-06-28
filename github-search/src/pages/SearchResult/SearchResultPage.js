@@ -15,8 +15,10 @@ function SearchResultPage() {
   })
 
   return <Main>
-    <Results>Resultados:<span> {searchResult?.total_count}</span></Results>
-    {usersList}
+    <p>Resultados:<span> {searchResult?.total_count}</span></p>
+    <Results>
+      {usersList}
+    </Results>
   </Main>
 }
 
